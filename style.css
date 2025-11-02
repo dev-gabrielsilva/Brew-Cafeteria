@@ -92,7 +92,7 @@ text-decoration: none;
 }
 
 .hero {
-    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.7)), url('Imagens/Ambiente.jpg') center / cover;
+    background: linear-gradient(rgba(44,24,16,0.7), rgba(44,24,16,0.7)), url('Imagens/ambiente.jpg') center / cover;
     height: 100vh;
     display: flex;
     align-items: center;
