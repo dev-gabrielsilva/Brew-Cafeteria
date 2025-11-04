@@ -35,6 +35,13 @@ header {
     gap: 20px;
 }
 
+@media (max-width: 1000px) {
+.sessoes {
+    flex-direction: column;
+    gap: 12px;  
+}  
+}
+
 .logo {
     display: flex;
     flex-direction: row;
@@ -156,10 +163,16 @@ text-decoration: none;
 
 .cardapio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     margin-top: 16px;
 } 
+
+@media (max-width: 850px) {
+  .cardapio-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 .cardapio-card {
     background: rgba(255,255,255,0.04);
@@ -190,7 +203,7 @@ text-decoration: none;
 
 .galeria-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3,1fr);
     gap: 20px;
     margin-top: 16px;
 }
@@ -198,8 +211,16 @@ text-decoration: none;
 .galeria-grid img {
     width: 100%;
     height: auto;
+    max-height: 350px;
     border-radius: 8px;
     box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    object-fit: contain;
+}
+
+@media (max-width: 850px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .galeria-grid img:hover {
@@ -289,21 +310,35 @@ text-decoration: none;
 }
 
 .footer {
-    background-color: #886d62;
-    color: #fff;
-    padding: auto;
-    margin-top: auto;
-    display: flex;
-    justify-content: center;
-    gap:100px;
+  background-color: #886d62; /* Ajuste a cor se desejar */
+  width: 100%;
+  color: #fff;
+  padding: 20px 0;
+  margin: 0;
 }
 
-.footer h3 {
-    margin: 0;
-    font-size: 1rem;
+.footer {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-.footer p {
-    margin: 4px 0 0;
-    font-size: 0.85rem;
+.footer img {
+  height: 28px;
+  width: 28px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Responsivo abaixo de 700px */
+@media (max-width: 700px) {
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+  }
 }
